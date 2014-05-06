@@ -1,0 +1,123 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  display: block;
+  padding: @thumbnail-padding;
+  margin-bottom: @line-height-computed;
+  line-height: @line-height-base;
+  background-color: @thumbnail-bg;
+  border: 2px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
+  .transition(all .2s ease-in-out);
+
+  > img,
+  a > img {
+    &:extend(.img-responsive);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Add a hover state for linked versions only
+  a&:hover,
+  a&:focus,
+  a&.active {
+    border-color: darken(#d7f5fc, 5%);
+	text-decoration: none;
+	background-color: lighten(#d7f5fc, 5%);
+  }
+
+  // Image captions
+  .caption {
+    padding: @thumbnail-caption-padding;
+    color: @thumbnail-caption-color;
+  }
+}
+
+// Mixin and adjust the grid image class
+.thumbnail-grid {
+  border-color: transparent;
+  
+  .caption {
+  	
+    small {
+      color: lighten(@thumbnail-caption-color, 40%);
+    }
+  }
+}
+
+.thumbnail-grid-lg {
+	
+}
+
+.thumbnail-grid-md {
+	line-height: 1.2;
+	
+	.thumbnail-title {
+		line-height: .8;
+	}
+	
+}
+
+.thumbnail-grid-sm {
+	
+	.thumbnail-title {
+		display: none;
+	}
+}
+
+// Mixin and adjust the grid image class parents
+.thumbnail-grid-parent {
+
+  a&:hover,
+  a&:focus,
+  a&.active {
+	
+	.children > img,
+	.children:before,
+    .children:after {
+		border-color: transparent;
+		background-color: transparent;
+	}
+	
+  }
+
+  .children {
+    position: relative;
+    
+    > img {
+      position: relative;
+	  z-index: 1;
+	  padding: @thumbnail-padding;
+	  border: 2px solid lighten(@thumbnail-border, 5%);
+	  border-radius: @thumbnail-border-radius;
+ 	  background-color: #fff;
+	  .transition(all .2s ease-in-out);
+    }
+  }
+
+  .children:before,
+  .children:after {
+  	position: absolute;
+  	padding: 3px;
+  	height: 100%;
+  	width: 100%;
+  	top: -6px;
+  	left: -6px;
+  	content: '';
+  	z-index: 0;
+    border: 2px solid lighten(@thumbnail-border, 5%);
+    border-radius: @thumbnail-border-radius;
+    background-color: #fff;
+	.transition(all .2s ease-in-out);
+  }
+
+  .children:before {
+  	width: 100%;
+  	top: -12px;
+  	left: -12px;
+  }
+}
