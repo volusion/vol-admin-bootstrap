@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Form</title>
+
+    <!-- Bootstrap -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style type="text/css">
+		.input-inline {
+			display: inline-block;
+		}
+		.selectwidthauto {
+			width:auto !important;
+		}
+		.padding-sm {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.margin-sm {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		.input-xxs {
+			width: 55px; 
+		}
+	</style>
+</head>
+<body>    
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li>Inventory</li>
+			<li class="active">Products</li>
+		</ol>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header pull-left">
+					<h3 style="margin-top:0;"><a href="#"><span class="glyphicon glyphicon-chevron-left small"></span></a> Add New Product</h3>
+				</div>
+				<div class="btn-toolbar pull-right" role="toolbar">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-cog"></span> Settings <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">All Product Settings</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Customize Columns</a></li>
+							<li><a href="#">Export Results</a></li>
+							<li><a href="#">Bookmark Results</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Bulk Updates</a></li>
+							<li><a href="#">Enable Quick Edit</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-icon"><span class="glyphicon glyphicon-chevron-left"></span></button>
+						<button type="button" class="btn btn-default btn-icon"><span class="glyphicon glyphicon-chevron-right"></span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr style="margin-top: 0;" />
+		<div class="row">
+			<div class="col-md-3">			
+				<a href="#" class="thumbnail">
+					<img src="http://placehold.it/300x300" class="img-responsive">
+				</a>
+			</div>
+			<form role="form">
+			<div class="col-md-9">
+				<div class="row">
+		            <fieldset>
+		              <legend class="col-md-12">Basic Fields</legend>
+		              <div class="form-group col-md-12">
+		                <label for="name"><abbr title="Name">Name</abbr></label>
+		                <input type="text" class="form-control" id="name" placeholder="">
+		              </div>
+		            </fieldset>
+		            <fieldset>
+		              <div class="form-group col-md-6">
+		                <label for="code"><abbr title="Code">Code</abbr></label>
+		                <input type="text" class="form-control" id="code" placeholder="">
+		              </div>
+		            </fieldset>
+		            <fieldset>
+		              <div class="form-group col-md-3">
+		                <label for="price"><abbr title="Price">Price</abbr></label>
+		                <div class="input-group">
+			                <span class="input-group-addon">$</span>
+			                <input type="text" class="form-control" id="price" placeholder="0.00">
+		                </div>
+		              </div>
+		            </fieldset>
+		            <fieldset>
+		              <div class="form-group col-md-3">
+		                <label for="weight"><abbr title="Weight">Weight</abbr></label>
+		                <div class="input-group">
+			                <input type="text" class="form-control" id="weight" placeholder="0">
+			                <span class="input-group-addon">lbs.</span>
+		                </div>
+		              </div>
+		            </fieldset>
+				</div>
+				<hr />
+				<div class="row">
+	              <legend class="col-md-12">
+		              <abbr title="Categories">Categories</abbr>
+		              <button type="button" class="btn btn-link btn-icon pull-right" data-toggle="collapse" data-target="#categories"><span class="glyphicon glyphicon-minus-sign"></span></button>
+					  <div class="text-muted small collapse"><small>No categories selected</small></div>
+	              </legend>
+	              <div id="categories" class="collapse in col-md-12">
+		              <div class="form-group">
+		              	<div class="input-group">
+		                  <input type="text" class="form-control" id="categories" placeholder="">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default btn-icon" type="button"><span class="glyphicon glyphicon-search"></span></button>
+					      </span>
+		              	</div>
+		              </div>
+					  <a class="btn-link" href="#"><span class="glyphicon glyphicon-plus"></span> Add Category</a>
+	              </div>
+				</div>
+				<hr />
+				<div class="row">
+	              <legend class="col-md-12">
+		              <abbr title="Categories">Description</abbr>
+		              <button type="button" class="btn btn-link btn-icon pull-right" data-toggle="collapse" data-target="#description"><span class="glyphicon glyphicon-minus-sign"></span></button>
+					  <div class="text-muted small collapse"><small>No description entered</small></div>
+	              </legend>
+	              <div id="description" class="collapse in col-md-12">
+		              <div class="form-group">
+		              	<textarea class="form-control" rows="6"></textarea>
+		              </div>
+	              </div>
+				</div>
+				<hr />
+				<div class="row">
+	              <legend class="col-md-12">
+		              <abbr title="Categories">Inventory &amp; Options</abbr>
+		              <button type="button" class="btn btn-link btn-icon pull-right" data-toggle="collapse" data-target="#inventoryOptions"><span class="glyphicon glyphicon-minus-sign"></span></button>
+					  <div class="text-muted small collapse"><small>Track inventory, Hide when out of stock, Options selected</small></div>
+	              </legend>
+	              <div id="inventoryOptions" class="collapse in col-md-12">
+		            <fieldset class="row">
+		              <div class="form-group col-md-3">
+		                <label for="weight">Inventory</label>
+		                <select class="form-control">
+						  <option>Track inventory</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+		              </div>
+		              <div class="form-group col-md-2">
+		                <label for="weight">Quantity</label>
+			            <input type="text" class="form-control" id="weight" placeholder="0">
+		              </div>
+		              <div class="form-group col-md-4">
+		                <label for="weight">Out of Stock Handling</label>
+		                <select class="form-control">
+						  <option>Hide when out of stock</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+		              </div>
+		            </fieldset>
+		            <div class="form-group">
+			            <div class="well well-sm clearfix">
+							<div class="col-md-6">
+								<input type="checkbox" id="inlineCheckbox1" value="option1"> This product has options
+							</div>
+							<div class="col-md-6 text-right">
+								<a href="#" class="btn btn-default">Add Options</a>
+							</div>
+			            </div>
+		            </div>
+	              </div>
+				</div>
+				<hr />
+			</div>
+			</form>
+		</div>
+	</div>    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../dist/js/bootstrap.min.js"></script>
+    
+    
+    <script type="text/javascript">
+    	
+    	$('.collapse').on('hide.bs.collapse', function () {
+			if ($(this).prev().children('div').length != 0) {
+				$(this).prev().children('div').collapse('show');
+			}
+			$(this).prev().children('button').children('.glyphicon-minus-sign').removeClass('glyphicon-minus-sign').addClass('glyphicon-plus-sign');
+		})
+    	
+    	$('.collapse').on('show.bs.collapse', function () {
+			if ($(this).prev().children('div').length != 0) {
+				$(this).prev().children('div').collapse('hide');
+			}
+			$(this).prev().children('button').children('.glyphicon-plus-sign').removeClass('glyphicon-plus-sign').addClass('glyphicon-minus-sign');
+		})
+    	
+    </script>
+</body>
+</html>
