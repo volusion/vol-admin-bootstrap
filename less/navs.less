@@ -139,6 +139,38 @@
 }
 
 
+// Pills in form
+// -------------------------
+.nav-pills-form {
+  margin-bottom: 5px;
+
+  > li {
+    float: left;
+
+    // Links rendered as pills
+    > a {
+      border-radius: @nav-pills-border-radius;
+      color: #999;
+      padding: 2px 10px;
+      font-weight: bold;
+    }
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #005581;
+        background-color: #ccf3fd;
+      }
+    }
+  }
+}
+
+
 // Stacked pills
 .nav-stacked {
   > li {

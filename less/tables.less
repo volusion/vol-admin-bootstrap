@@ -100,6 +100,31 @@ th {
 }
 
 
+// Form version
+//
+// Add borders all around the table and between all the columns.
+
+.table-in-form {
+  border: 1px solid @table-border-color;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 1px;
+      background-color: #ccf3fd;
+    }
+  }
+}
+
+
 // Zebra-striping
 //
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
