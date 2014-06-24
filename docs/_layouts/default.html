@@ -5,10 +5,17 @@
     {% include header.html %}
   </head>
   <body>
+<<<<<<< HEAD
     <a class="sr-only" href="#content">Skip to main content</a>
 
     <!-- Docs master nav -->
     {% include nav-main.html %}
+=======
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    {% include nav/main.html %}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content">
@@ -26,6 +33,7 @@
           {{ content }}
         </div>
         <div class="col-md-3">
+<<<<<<< HEAD
           <div class="bs-docs-sidebar hidden-print" role="complementary">
             <ul class="nav bs-docs-sidenav">
               {% if page.slug == "getting-started" %}
@@ -42,15 +50,44 @@
                 {% include nav-about.html %}
               {% elsif page.slug == "migration" %}
                 {% include nav-migration.html %}
+=======
+          <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+            <ul class="nav bs-docs-sidenav">
+              {% if page.slug == "getting-started" %}
+                {% include nav/getting-started.html %}
+              {% elsif page.slug == "css" %}
+                {% include nav/css.html %}
+              {% elsif page.slug == "components" %}
+                {% include nav/components.html %}
+              {% elsif page.slug == "js" %}
+                {% include nav/javascript.html %}
+              {% elsif page.slug == "customize" %}
+                {% include nav/customize.html %}
+              {% elsif page.slug == "about" %}
+                {% include nav/about.html %}
+              {% elsif page.slug == "migration" %}
+                {% include nav/migration.html %}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
               {% endif %}
             </ul>
             <a class="back-to-top" href="#top">
               Back to top
             </a>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
 
+=======
+            {% if page.slug == "css" or page.slug == "components" or page.slug == "js" %}
+            <a href="#" class="bs-docs-theme-toggle">
+              Preview theme
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     </div>
 
     {% include footer.html %}

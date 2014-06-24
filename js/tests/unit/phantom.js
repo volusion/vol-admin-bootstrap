@@ -2,11 +2,18 @@
  * grunt-contrib-qunit
  * http://gruntjs.com/
  *
+<<<<<<< HEAD
  * Copyright (c) 2013 'Cowboy' Ben Alman, contributors
  * Licensed under the MIT license.
  */
 
 /*global QUnit:true, alert:true*/
+=======
+ * Copyright (c) 2013 "Cowboy" Ben Alman, contributors
+ * Licensed under the MIT license.
+ */
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 (function () {
   'use strict';
 

@@ -20,7 +20,11 @@
     }
     &:focus {
       // Remove focus outline when dropdown JS adds it after closing the menu
+<<<<<<< HEAD
       outline: none;
+=======
+      outline: 0;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     }
   }
 }
@@ -42,7 +46,11 @@
 
   .btn-group,
   .input-group {
+<<<<<<< HEAD
     // float: left;
+=======
+    float: left;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
   > .btn,
   > .btn-group,
@@ -128,7 +136,11 @@
 
 // Reposition the caret
 .btn .caret {
+<<<<<<< HEAD
   margin-left: 10px;
+=======
+  margin-left: 0;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }
 // Carets in other button sizes
 .btn-lg .caret {
@@ -216,11 +228,34 @@
   > .btn-group .btn {
     width: 100%;
   }
+<<<<<<< HEAD
+=======
+
+  > .btn-group .dropdown-menu {
+    left: auto;
+  }
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }
 
 
 // Checkbox and radio options
+<<<<<<< HEAD
 [data-toggle="buttons"] > .btn > input[type="radio"],
 [data-toggle="buttons"] > .btn > input[type="checkbox"] {
   display: none;
+=======
+//
+// In order to support the browser's form validation feedback, powered by the
+// `required` attribute, we have to "hide" the inputs via `opacity`. We cannot
+// use `display: none;` or `visibility: hidden;` as that also hides the popover.
+// This way, we ensure a DOM element is visible to position the popover from.
+//
+// See https://github.com/twbs/bootstrap/pull/12794 for more.
+
+[data-toggle="buttons"] > .btn > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  .opacity(0);
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }

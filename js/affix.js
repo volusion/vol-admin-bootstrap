@@ -15,7 +15,12 @@
 
   var Affix = function (element, options) {
     this.options = $.extend({}, Affix.DEFAULTS, options)
+<<<<<<< HEAD
     this.$window = $(window)
+=======
+
+    this.$target = $(this.options.target)
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
       .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
       .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
 
@@ -27,16 +32,30 @@
     this.checkPosition()
   }
 
+<<<<<<< HEAD
   Affix.RESET = 'affix affix-top affix-bottom'
 
   Affix.DEFAULTS = {
     offset: 0
+=======
+  Affix.VERSION  = '3.1.1'
+
+  Affix.RESET    = 'affix affix-top affix-bottom'
+
+  Affix.DEFAULTS = {
+    offset: 0,
+    target: window
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
 
   Affix.prototype.getPinnedOffset = function () {
     if (this.pinnedOffset) return this.pinnedOffset
     this.$element.removeClass(Affix.RESET).addClass('affix')
+<<<<<<< HEAD
     var scrollTop = this.$window.scrollTop()
+=======
+    var scrollTop = this.$target.scrollTop()
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     var position  = this.$element.offset()
     return (this.pinnedOffset = position.top - scrollTop)
   }
@@ -49,14 +68,21 @@
     if (!this.$element.is(':visible')) return
 
     var scrollHeight = $(document).height()
+<<<<<<< HEAD
     var scrollTop    = this.$window.scrollTop()
+=======
+    var scrollTop    = this.$target.scrollTop()
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     var position     = this.$element.offset()
     var offset       = this.options.offset
     var offsetTop    = offset.top
     var offsetBottom = offset.bottom
 
+<<<<<<< HEAD
     if (this.affixed == 'top') position.top += scrollTop
 
+=======
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     if (typeof offset != 'object')         offsetBottom = offsetTop = offset
     if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
     if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
@@ -66,7 +92,11 @@
                 offsetTop    != null && (scrollTop <= offsetTop) ? 'top' : false
 
     if (this.affixed === affix) return
+<<<<<<< HEAD
     if (this.unpin) this.$element.css('top', '')
+=======
+    if (this.unpin != null) this.$element.css('top', '')
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
     var affixType = 'affix' + (affix ? '-' + affix : '')
     var e         = $.Event(affixType + '.bs.affix')
@@ -84,7 +114,13 @@
       .trigger($.Event(affixType.replace('affix', 'affixed')))
 
     if (affix == 'bottom') {
+<<<<<<< HEAD
       this.$element.offset({ top: scrollHeight - offsetBottom - this.$element.height() })
+=======
+      this.$element.offset({
+        top: scrollHeight - this.$element.height() - offsetBottom
+      })
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     }
   }
 
@@ -92,9 +128,13 @@
   // AFFIX PLUGIN DEFINITION
   // =======================
 
+<<<<<<< HEAD
   var old = $.fn.affix
 
   $.fn.affix = function (option) {
+=======
+  function Plugin(option) {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.affix')
@@ -105,6 +145,12 @@
     })
   }
 
+<<<<<<< HEAD
+=======
+  var old = $.fn.affix
+
+  $.fn.affix             = Plugin
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   $.fn.affix.Constructor = Affix
 
 
@@ -130,7 +176,11 @@
       if (data.offsetBottom) data.offset.bottom = data.offsetBottom
       if (data.offsetTop)    data.offset.top    = data.offsetTop
 
+<<<<<<< HEAD
       $spy.affix(data)
+=======
+      Plugin.call($spy, data)
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     })
   })
 

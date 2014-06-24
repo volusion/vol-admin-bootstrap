@@ -5,7 +5,11 @@
 // Heads up!
 //
 // We don't use the `.opacity()` mixin here since it causes a bug with text
+<<<<<<< HEAD
 // fields in IE7-8. Source: https://github.com/twitter/bootstrap/pull/3552.
+=======
+// fields in IE7-8. Source: https://github.com/twbs/bootstrap/pull/3552.
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
 .fade {
   opacity: 0;
@@ -17,10 +21,19 @@
 
 .collapse {
   display: none;
+<<<<<<< HEAD
   &.in {
     display: block;
   }
 }
+=======
+
+  &.in      { display: block; }
+  tr&.in    { display: table-row; }
+  tbody&.in { display: table-row-group; }
+}
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 .collapsing {
   position: relative;
   height: 0;

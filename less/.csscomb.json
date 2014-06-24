@@ -1,7 +1,11 @@
 {
   "always-semicolon": true,
   "block-indent": 2,
+<<<<<<< HEAD
   "colon-space": true,
+=======
+  "colon-space": [0, 1],
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   "color-case": "lower",
   "color-shorthand": true,
   "combinator-space": true,
@@ -10,7 +14,11 @@
   "leading-zero": false,
   "remove-empty-rulesets": true,
   "rule-indent": 2,
+<<<<<<< HEAD
   "stick-brace": true,
+=======
+  "stick-brace": " ",
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   "strip-spaces": true,
   "unitless-zero": true,
   "vendor-prefix-align": true,

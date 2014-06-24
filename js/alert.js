@@ -18,6 +18,11 @@
     $(el).on('click', dismiss, this.close)
   }
 
+<<<<<<< HEAD
+=======
+  Alert.VERSION = '3.1.1'
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   Alert.prototype.close = function (e) {
     var $this    = $(this)
     var selector = $this.attr('data-target')
@@ -42,12 +47,21 @@
     $parent.removeClass('in')
 
     function removeElement() {
+<<<<<<< HEAD
       $parent.trigger('closed.bs.alert').remove()
+=======
+      // detach from parent, fire event then clean up data
+      $parent.detach().trigger('closed.bs.alert').remove()
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     }
 
     $.support.transition && $parent.hasClass('fade') ?
       $parent
+<<<<<<< HEAD
         .one($.support.transition.end, removeElement)
+=======
+        .one('bsTransitionEnd', removeElement)
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
         .emulateTransitionEnd(150) :
       removeElement()
   }
@@ -56,9 +70,13 @@
   // ALERT PLUGIN DEFINITION
   // =======================
 
+<<<<<<< HEAD
   var old = $.fn.alert
 
   $.fn.alert = function (option) {
+=======
+  function Plugin(option) {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     return this.each(function () {
       var $this = $(this)
       var data  = $this.data('bs.alert')
@@ -68,6 +86,12 @@
     })
   }
 
+<<<<<<< HEAD
+=======
+  var old = $.fn.alert
+
+  $.fn.alert             = Plugin
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   $.fn.alert.Constructor = Alert
 
 

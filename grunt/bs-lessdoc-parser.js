@@ -22,7 +22,11 @@ Mini-language:
   //=== This is a subheading.
 
   //** Optional description for the following variable. You **can** use Markdown in descriptions to discuss `<html>` stuff.
+<<<<<<< HEAD
   @foo: #ffff;
+=======
+  @foo: #fff;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
   //-- This is a heading for a section whose variables shouldn't be customizable
 

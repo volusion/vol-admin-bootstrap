@@ -1,11 +1,17 @@
 # Dependencies
+<<<<<<< HEAD
 markdown:         rdiscount
 pygments:         true
+=======
+markdown:         kramdown
+highlighter:      pygments
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
 # Permalinks
 permalink:        pretty
 
 # Server
+<<<<<<< HEAD
 source:           ./docs
 destination:      ./_gh_pages
 host:             0.0.0.0
@@ -18,6 +24,16 @@ exclude:
   - "jade"
   - "vendor"
 
+=======
+source:           docs
+destination:      _gh_pages
+host:             0.0.0.0
+port:             9001
+baseurl:          /
+url:              http://getbootstrap.com
+encoding:         UTF-8
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 # Custom vars
 current_version:  3.1.1
 repo:             https://github.com/twbs/bootstrap

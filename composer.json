@@ -1,7 +1,21 @@
 {
   "name": "twbs/bootstrap",
+<<<<<<< HEAD
   "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
   "keywords": ["bootstrap", "css"],
+=======
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   "homepage": "http://getbootstrap.com",
   "authors": [
     {
@@ -19,7 +33,15 @@
   "license": "MIT",
   "extra": {
     "branch-alias": {
+<<<<<<< HEAD
       "dev-master": "3.0.x-dev"
     }
+=======
+      "dev-master": "3.1.x-dev"
+    }
+  },
+  "replace": {
+    "twitter/bootstrap": "self.version"
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
 }

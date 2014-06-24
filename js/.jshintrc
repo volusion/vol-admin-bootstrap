@@ -1,5 +1,6 @@
 {
   "asi"      : true,
+<<<<<<< HEAD
   "boss"     : true,
   "browser"  : true,
   "curly"    : false,
@@ -12,3 +13,18 @@
   "quotmark" : "single",
   "validthis": true
 }
+=======
+  "browser"  : true,
+  "eqeqeq"   : false,
+  "eqnull"   : true,
+  "es3"      : true,
+  "expr"     : true,
+  "jquery"   : true,
+  "latedef"  : true,
+  "laxbreak" : true,
+  "nonbsp"   : true,
+  "strict"   : true,
+  "undef"    : true,
+  "unused"   : true
+}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf

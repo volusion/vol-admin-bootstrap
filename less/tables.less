@@ -4,7 +4,10 @@
 
 
 table {
+<<<<<<< HEAD
   max-width: 100%;
+=======
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   background-color: @table-bg;
 }
 th {
@@ -16,6 +19,10 @@ th {
 
 .table {
   width: 100%;
+<<<<<<< HEAD
+=======
+  max-width: 100%;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   margin-bottom: @line-height-computed;
   // Cells
   > thead,
@@ -100,6 +107,7 @@ th {
 }
 
 
+<<<<<<< HEAD
 // Form version
 //
 // Add borders all around the table and between all the columns.
@@ -125,6 +133,8 @@ th {
 }
 
 
+=======
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 // Zebra-striping
 //
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
@@ -193,12 +203,21 @@ table {
 // by enabling horizontal scrolling. Only applies <768px. Everything above that
 // will display normally.
 
+<<<<<<< HEAD
 @media (max-width: @screen-xs-max) {
   .table-responsive {
     width: 100%;
     margin-bottom: (@line-height-computed * 0.75);
     overflow-y: hidden;
     overflow-x: scroll;
+=======
+.table-responsive {
+  @media screen and (max-width: @screen-xs-max) {
+    width: 100%;
+    margin-bottom: (@line-height-computed * 0.75);
+    overflow-y: hidden;
+    overflow-x: auto;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid @table-border-color;
     -webkit-overflow-scrolling: touch;

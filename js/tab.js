@@ -17,6 +17,11 @@
     this.element = $(element)
   }
 
+<<<<<<< HEAD
+=======
+  Tab.VERSION = '3.1.1'
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   Tab.prototype.show = function () {
     var $this    = this.element
     var $ul      = $this.closest('ul:not(.dropdown-menu)')
@@ -24,7 +29,11 @@
 
     if (!selector) {
       selector = $this.attr('href')
+<<<<<<< HEAD
       selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+=======
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     }
 
     if ($this.parent('li').hasClass('active')) return
@@ -40,7 +49,11 @@
 
     var $target = $(selector)
 
+<<<<<<< HEAD
     this.activate($this.parent('li'), $ul)
+=======
+    this.activate($this.closest('li'), $ul)
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     this.activate($target, $target.parent(), function () {
       $this.trigger({
         type: 'shown.bs.tab',
@@ -79,7 +92,11 @@
 
     transition ?
       $active
+<<<<<<< HEAD
         .one($.support.transition.end, next)
+=======
+        .one('bsTransitionEnd', next)
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
         .emulateTransitionEnd(150) :
       next()
 
@@ -90,9 +107,13 @@
   // TAB PLUGIN DEFINITION
   // =====================
 
+<<<<<<< HEAD
   var old = $.fn.tab
 
   $.fn.tab = function ( option ) {
+=======
+  function Plugin(option) {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     return this.each(function () {
       var $this = $(this)
       var data  = $this.data('bs.tab')
@@ -102,6 +123,12 @@
     })
   }
 
+<<<<<<< HEAD
+=======
+  var old = $.fn.tab
+
+  $.fn.tab             = Plugin
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   $.fn.tab.Constructor = Tab
 
 
@@ -119,7 +146,11 @@
 
   $(document).on('click.bs.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
     e.preventDefault()
+<<<<<<< HEAD
     $(this).tab('show')
+=======
+    Plugin.call($(this), 'show')
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   })
 
 }(jQuery);

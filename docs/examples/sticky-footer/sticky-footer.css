@@ -8,7 +8,11 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+<<<<<<< HEAD
 #footer {
+=======
+.footer {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   position: absolute;
   bottom: 0;
   width: 100%;

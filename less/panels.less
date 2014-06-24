@@ -20,7 +20,11 @@
 
 // Optional heading
 .panel-heading {
+<<<<<<< HEAD
   padding: 10px 15px;
+=======
+  padding: @panel-heading-padding;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   border-bottom: 1px solid transparent;
   .border-top-radius((@panel-border-radius - 1));
 
@@ -43,7 +47,11 @@
 
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
+<<<<<<< HEAD
   padding: 10px 15px;
+=======
+  padding: @panel-footer-padding;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   background-color: @panel-footer-bg;
   border-top: 1px solid @panel-inner-border;
   .border-bottom-radius((@panel-border-radius - 1));
@@ -86,7 +94,13 @@
     border-top-width: 0;
   }
 }
+<<<<<<< HEAD
 
+=======
+.list-group + .panel-footer {
+  border-top-width: 0;
+}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
 // Tables in panels
 //
@@ -95,7 +109,12 @@
 
 .panel {
   > .table,
+<<<<<<< HEAD
   > .table-responsive > .table {
+=======
+  > .table-responsive > .table,
+  > .panel-collapse > .table {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     margin-bottom: 0;
   }
   // Add border top radius for first one
@@ -199,7 +218,10 @@
   .panel {
     margin-bottom: 0;
     border-radius: @panel-border-radius;
+<<<<<<< HEAD
     overflow: hidden; // crop contents when collapsed
+=======
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     + .panel {
       margin-top: 5px;
     }
@@ -207,7 +229,11 @@
 
   .panel-heading {
     border-bottom: 0;
+<<<<<<< HEAD
     + .panel-collapse .panel-body {
+=======
+    + .panel-collapse > .panel-body {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
       border-top: 1px solid @panel-inner-border;
     }
   }

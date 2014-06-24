@@ -48,6 +48,15 @@
     background-color: darken(@btn-color, 12%);
     border-color: darken(@btn-color, 14%);
   }
+<<<<<<< HEAD
+=======
+
+  &:disabled,
+  &[disabled] {
+    background-color: darken(@btn-color, 12%);
+    background-image: none;
+  }
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }
 
 // Common styles
@@ -191,6 +200,14 @@
 .progress-bar-warning    { .progress-bar-styles(@progress-bar-warning-bg); }
 .progress-bar-danger     { .progress-bar-styles(@progress-bar-danger-bg); }
 
+<<<<<<< HEAD
+=======
+// Reset the striped class because our mixins don't do multiple gradients and
+// the above custom styles override the new `.progress-bar-striped` in v3.2.0.
+.progress-bar-striped {
+  #gradient > .striped();
+}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
 
 //

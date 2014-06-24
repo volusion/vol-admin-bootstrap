@@ -14,7 +14,12 @@
 // For more information, see the following:
 //
 // Issue: https://github.com/twbs/bootstrap/issues/10497
+<<<<<<< HEAD
 // Docs: http://getbootstrap.com/getting-started/#browsers
+=======
+// Docs: http://getbootstrap.com/getting-started/#support-ie10-width
+// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 // Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
 
 @-ms-viewport {
@@ -23,6 +28,10 @@
 
 
 // Visibility utilities
+<<<<<<< HEAD
+=======
+// Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 .visible-xs,
 .visible-sm,
 .visible-md,
@@ -30,26 +39,119 @@
   .responsive-invisibility();
 }
 
+<<<<<<< HEAD
+=======
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important;
+}
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 .visible-xs {
   @media (max-width: @screen-xs-max) {
     .responsive-visibility();
   }
 }
+<<<<<<< HEAD
+=======
+.visible-xs-block {
+  @media (max-width: @screen-xs-max) {
+    display: block !important;
+  }
+}
+.visible-xs-inline {
+  @media (max-width: @screen-xs-max) {
+    display: inline !important;
+  }
+}
+.visible-xs-inline-block {
+  @media (max-width: @screen-xs-max) {
+    display: inline-block !important;
+  }
+}
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 .visible-sm {
   @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
     .responsive-visibility();
   }
 }
+<<<<<<< HEAD
+=======
+.visible-sm-block {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: block !important;
+  }
+}
+.visible-sm-inline {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: inline !important;
+  }
+}
+.visible-sm-inline-block {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 .visible-md {
   @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
     .responsive-visibility();
   }
 }
+<<<<<<< HEAD
+=======
+.visible-md-block {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: block !important;
+  }
+}
+.visible-md-inline {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: inline !important;
+  }
+}
+.visible-md-inline-block {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: inline-block !important;
+  }
+}
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 .visible-lg {
   @media (min-width: @screen-lg-min) {
     .responsive-visibility();
   }
 }
+<<<<<<< HEAD
+=======
+.visible-lg-block {
+  @media (min-width: @screen-lg-min) {
+    display: block !important;
+  }
+}
+.visible-lg-inline {
+  @media (min-width: @screen-lg-min) {
+    display: inline !important;
+  }
+}
+.visible-lg-inline-block {
+  @media (min-width: @screen-lg-min) {
+    display: inline-block !important;
+  }
+}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
 .hidden-xs {
   @media (max-width: @screen-xs-max) {
@@ -77,6 +179,10 @@
 //
 // Media queries are placed on the inside to be mixin-friendly.
 
+<<<<<<< HEAD
+=======
+// Note: Deprecated .visible-print as of v3.2.0
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 .visible-print {
   .responsive-invisibility();
 
@@ -84,6 +190,30 @@
     .responsive-visibility();
   }
 }
+<<<<<<< HEAD
+=======
+.visible-print-block {
+  display: none !important;
+
+  @media print {
+    display: block !important;
+  }
+}
+.visible-print-inline {
+  display: none !important;
+
+  @media print {
+    display: inline !important;
+  }
+}
+.visible-print-inline-block {
+  display: none !important;
+
+  @media print {
+    display: inline-block !important;
+  }
+}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
 .hidden-print {
   @media print {

@@ -28,7 +28,13 @@
 
   > .active,
   > .next,
+<<<<<<< HEAD
   > .prev { display: block; }
+=======
+  > .prev {
+    display: block;
+  }
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
   > .active {
     left: 0;
@@ -91,7 +97,11 @@
   // Hover/focus state
   &:hover,
   &:focus {
+<<<<<<< HEAD
     outline: none;
+=======
+    outline: 0;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     color: @carousel-control-color;
     text-decoration: none;
     .opacity(.9);
@@ -110,20 +120,35 @@
   .icon-prev,
   .glyphicon-chevron-left {
     left: 50%;
+<<<<<<< HEAD
+=======
+    margin-left: -10px;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
   .icon-next,
   .glyphicon-chevron-right {
     right: 50%;
+<<<<<<< HEAD
+=======
+    margin-right: -10px;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
   .icon-prev,
   .icon-next {
     width:  20px;
     height: 20px;
     margin-top: -10px;
+<<<<<<< HEAD
     margin-left: -10px;
     font-family: serif;
   }
 
+=======
+    font-family: serif;
+  }
+
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   .icon-prev {
     &:before {
       content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
@@ -213,9 +238,22 @@
       width: 30px;
       height: 30px;
       margin-top: -15px;
+<<<<<<< HEAD
       margin-left: -15px;
       font-size: 30px;
     }
+=======
+      font-size: 30px;
+    }
+    .glyphicon-chevron-left,
+    .icon-prev {
+      margin-left: -15px;
+    }
+    .glyphicon-chevron-right,
+    .icon-next {
+      margin-right: -15px;
+    }
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
 
   // Show and left align the captions

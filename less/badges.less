@@ -3,7 +3,11 @@
 // --------------------------------------------------
 
 
+<<<<<<< HEAD
 // Base classes
+=======
+// Base class
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 .badge {
   display: inline-block;
   min-width: 10px;
@@ -32,6 +36,7 @@
     top: 0;
     padding: 1px 5px;
   }
+<<<<<<< HEAD
 }
 
 // Hover state, but only for links
@@ -52,4 +57,26 @@ a.list-group-item.active > .badge,
 }
 .nav-pills > li > a > .badge {
   margin-left: 3px;
+=======
+
+  // Hover state, but only for links
+  a& {
+    &:hover,
+    &:focus {
+      color: @badge-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  // Account for badges in navs
+  a.list-group-item.active > &,
+  .nav-pills > .active > a > & {
+    color: @badge-active-color;
+    background-color: @badge-active-bg;
+  }
+  .nav-pills > li > a > & {
+    margin-left: 3px;
+  }
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }

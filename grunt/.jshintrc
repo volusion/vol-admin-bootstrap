@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "asi": false,
   "camelcase": true,
   "curly": true,
@@ -13,4 +14,10 @@
   "strict": true,
   "trailing": true,
   "node" : true
+=======
+  "extends" : "../js/.jshintrc",
+  "browser" : false,
+  "es3"     : false,
+  "node"    : true
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }

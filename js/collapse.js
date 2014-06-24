@@ -22,6 +22,11 @@
     if (this.options.toggle) this.toggle()
   }
 
+<<<<<<< HEAD
+=======
+  Collapse.VERSION  = '3.1.1'
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   Collapse.DEFAULTS = {
     toggle: true
   }
@@ -43,7 +48,11 @@
     if (actives && actives.length) {
       var hasData = actives.data('bs.collapse')
       if (hasData && hasData.transitioning) return
+<<<<<<< HEAD
       actives.collapse('hide')
+=======
+      Plugin.call(actives, 'hide')
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
       hasData || actives.data('bs.collapse', null)
     }
 
@@ -51,18 +60,29 @@
 
     this.$element
       .removeClass('collapse')
+<<<<<<< HEAD
       .addClass('collapsing')
       [dimension](0)
+=======
+      .addClass('collapsing')[dimension](0)
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
     this.transitioning = 1
 
     var complete = function () {
       this.$element
         .removeClass('collapsing')
+<<<<<<< HEAD
         .addClass('collapse in')
         [dimension]('auto')
       this.transitioning = 0
       this.$element.trigger('shown.bs.collapse')
+=======
+        .addClass('collapse in')[dimension]('')
+      this.transitioning = 0
+      this.$element
+        .trigger('shown.bs.collapse')
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     }
 
     if (!$.support.transition) return complete.call(this)
@@ -70,9 +90,14 @@
     var scrollSize = $.camelCase(['scroll', dimension].join('-'))
 
     this.$element
+<<<<<<< HEAD
       .one($.support.transition.end, $.proxy(complete, this))
       .emulateTransitionEnd(350)
       [dimension](this.$element[0][scrollSize])
+=======
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(350)[dimension](this.$element[0][scrollSize])
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
 
   Collapse.prototype.hide = function () {
@@ -84,9 +109,13 @@
 
     var dimension = this.dimension()
 
+<<<<<<< HEAD
     this.$element
       [dimension](this.$element[dimension]())
       [0].offsetHeight
+=======
+    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
     this.$element
       .addClass('collapsing')
@@ -107,7 +136,11 @@
 
     this.$element
       [dimension](0)
+<<<<<<< HEAD
       .one($.support.transition.end, $.proxy(complete, this))
+=======
+      .one('bsTransitionEnd', $.proxy(complete, this))
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
       .emulateTransitionEnd(350)
   }
 
@@ -119,9 +152,13 @@
   // COLLAPSE PLUGIN DEFINITION
   // ==========================
 
+<<<<<<< HEAD
   var old = $.fn.collapse
 
   $.fn.collapse = function (option) {
+=======
+  function Plugin(option) {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.collapse')
@@ -133,6 +170,12 @@
     })
   }
 
+<<<<<<< HEAD
+=======
+  var old = $.fn.collapse
+
+  $.fn.collapse             = Plugin
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   $.fn.collapse.Constructor = Collapse
 
 
@@ -148,11 +191,20 @@
   // COLLAPSE DATA-API
   // =================
 
+<<<<<<< HEAD
   $(document).on('click.bs.collapse.data-api', '[data-toggle=collapse]', function (e) {
     var $this   = $(this), href
     var target  = $this.attr('data-target')
         || e.preventDefault()
         || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') //strip for ie7
+=======
+  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+    var href
+    var $this   = $(this)
+    var target  = $this.attr('data-target')
+        || e.preventDefault()
+        || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     var $target = $(target)
     var data    = $target.data('bs.collapse')
     var option  = data ? 'toggle' : $this.data()
@@ -160,11 +212,19 @@
     var $parent = parent && $(parent)
 
     if (!data || !data.transitioning) {
+<<<<<<< HEAD
       if ($parent) $parent.find('[data-toggle=collapse][data-parent="' + parent + '"]').not($this).addClass('collapsed')
       $this[$target.hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
     }
 
     $target.collapse(option)
+=======
+      if ($parent) $parent.find('[data-toggle="collapse"][data-parent="' + parent + '"]').not($this).addClass('collapsed')
+      $this[$target.hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
+    }
+
+    Plugin.call($target, option)
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   })
 
 }(jQuery);

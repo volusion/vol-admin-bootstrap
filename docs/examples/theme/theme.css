@@ -12,3 +12,10 @@ body {
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+<<<<<<< HEAD
+=======
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf

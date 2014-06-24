@@ -1,5 +1,6 @@
 {
   "name": "bootstrap",
+<<<<<<< HEAD
   "version": "3.1.1",
   "main": [
     "./dist/css/bootstrap.css",
@@ -11,12 +12,43 @@
   ],
   "ignore": [
     "**/.*",
+=======
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "version": "3.1.1",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://getbootstrap.com",
+  "main": [
+    "less/bootstrap.less",
+    "dist/css/bootstrap.css",
+    "dist/js/bootstrap.js",
+    "dist/fonts/glyphicons-halflings-regular.eot",
+    "dist/fonts/glyphicons-halflings-regular.svg",
+    "dist/fonts/glyphicons-halflings-regular.ttf",
+    "dist/fonts/glyphicons-halflings-regular.woff"
+  ],
+  "ignore": [
+    ".*",
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     "_config.yml",
     "CNAME",
     "composer.json",
     "CONTRIBUTING.md",
     "docs",
+<<<<<<< HEAD
     "js/tests"
+=======
+    "js/tests",
+    "test-infra"
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   ],
   "dependencies": {
     "jquery": ">= 1.9.0"

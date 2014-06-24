@@ -15,8 +15,12 @@
 // Container that the modal scrolls within
 .modal {
   display: none;
+<<<<<<< HEAD
   overflow: auto;
   overflow-y: scroll;
+=======
+  overflow: hidden;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   position: fixed;
   top: 0;
   right: 0;
@@ -31,10 +35,21 @@
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
+<<<<<<< HEAD
     .translate(0, -25%);
     .transition-transform(~"0.3s ease-out");
   }
   &.in .modal-dialog { .translate(0, 0)}
+=======
+    .translate3d(0, -25%, 0);
+    .transition-transform(~"0.3s ease-out");
+  }
+  &.in .modal-dialog { .translate3d(0, 0, 0) }
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }
 
 // Shell div to position the modal with bottom padding
@@ -54,7 +69,11 @@
   .box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
+<<<<<<< HEAD
   outline: none;
+=======
+  outline: 0;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }
 
 // Modal background
@@ -98,8 +117,12 @@
 
 // Footer (for actions)
 .modal-footer {
+<<<<<<< HEAD
   margin-top: 15px;
   padding: (@modal-inner-padding - 1) @modal-inner-padding @modal-inner-padding;
+=======
+  padding: @modal-inner-padding;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   text-align: right; // right align buttons
   border-top: 1px solid @modal-footer-border-color;
   &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
@@ -119,6 +142,18 @@
   }
 }
 
+<<<<<<< HEAD
+=======
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 // Scale up the modal
 @media (min-width: @screen-sm-min) {
   // Automatically set modal's width for larger viewports

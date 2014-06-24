@@ -17,6 +17,16 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+<<<<<<< HEAD
+=======
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
 /*
  * Sidebar
@@ -52,7 +62,13 @@ body {
   padding-right: 20px;
   padding-left: 20px;
 }
+<<<<<<< HEAD
 .nav-sidebar > .active > a {
+=======
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   color: #fff;
   background-color: #428bca;
 }

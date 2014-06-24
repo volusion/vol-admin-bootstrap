@@ -10,11 +10,19 @@
 // Import the fonts
 @font-face {
   font-family: 'Glyphicons Halflings';
+<<<<<<< HEAD
   src: ~"url('@{icon-font-path}@{icon-font-name}.eot')";
   src: ~"url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype')",
        ~"url('@{icon-font-path}@{icon-font-name}.woff') format('woff')",
        ~"url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype')",
        ~"url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg')";
+=======
+  src: url('@{icon-font-path}@{icon-font-name}.eot');
+  src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('@{icon-font-path}@{icon-font-name}.woff') format('woff'),
+       url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
+       url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg');
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 }
 
 // Catchall baseclass
@@ -231,6 +239,7 @@
 .glyphicon-cloud-upload           { &:before { content: "\e198"; } }
 .glyphicon-tree-conifer           { &:before { content: "\e199"; } }
 .glyphicon-tree-deciduous         { &:before { content: "\e200"; } }
+<<<<<<< HEAD
 
 // Spacing fix
 .btn .glyphicon {
@@ -240,3 +249,5 @@
 .btn.btn-icon .glyphicon {
   margin-right: 0;
 }
+=======
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf

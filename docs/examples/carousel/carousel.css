@@ -22,7 +22,11 @@ body {
 }
 
 /* Flip around the padding for proper display in narrow viewports */
+<<<<<<< HEAD
 .navbar-wrapper .container {
+=======
+.navbar-wrapper > .container {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   padding-right: 0;
   padding-left: 0;
 }
@@ -30,6 +34,12 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 }
+<<<<<<< HEAD
+=======
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -63,12 +73,15 @@ body {
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
+<<<<<<< HEAD
 /* Pad the edges of the mobile views a bit */
 .marketing {
   padding-right: 15px;
   padding-left: 15px;
 }
 
+=======
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 20px;
@@ -104,23 +117,34 @@ body {
 
 @media (min-width: 768px) {
 
+<<<<<<< HEAD
   /* Remove the edge padding needed for mobile */
   .marketing {
     padding-right: 0;
     padding-left: 0;
   }
 
+=======
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   /* Navbar positioning foo */
   .navbar-wrapper {
     margin-top: 20px;
   }
   .navbar-wrapper .container {
     padding-right: 15px;
+<<<<<<< HEAD
     padding-left:  15px;
   }
   .navbar-wrapper .navbar {
     padding-right: 0;
     padding-left:  0;
+=======
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
 
   /* The navbar becomes detached from the top, so we round the corners */

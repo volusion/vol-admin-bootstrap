@@ -33,12 +33,22 @@
   }
 }
 
+<<<<<<< HEAD
 // Dismissable alerts
 //
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissable {
  padding-right: (@alert-padding + 20);
+=======
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissible {
+  padding-right: (@alert-padding + 20);
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
 
   // Adjust close link position
   .close {

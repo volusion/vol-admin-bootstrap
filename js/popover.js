@@ -19,11 +19,20 @@
 
   if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
 
+<<<<<<< HEAD
+=======
+  Popover.VERSION  = '3.1.1'
+
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
     placement: 'right',
     trigger: 'click',
     content: '',
+<<<<<<< HEAD
     template: '<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+=======
+    template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   })
 
 
@@ -44,7 +53,11 @@
     var content = this.getContent()
 
     $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
+<<<<<<< HEAD
     $tip.find('.popover-content')[ // we use append for html objects to maintain js events
+=======
+    $tip.find('.popover-content').empty()[ // we use append for html objects to maintain js events
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
       this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
     ](content)
 
@@ -70,7 +83,11 @@
   }
 
   Popover.prototype.arrow = function () {
+<<<<<<< HEAD
     return this.$arrow = this.$arrow || this.tip().find('.arrow')
+=======
+    return (this.$arrow = this.$arrow || this.tip().find('.arrow'))
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   }
 
   Popover.prototype.tip = function () {
@@ -82,9 +99,13 @@
   // POPOVER PLUGIN DEFINITION
   // =========================
 
+<<<<<<< HEAD
   var old = $.fn.popover
 
   $.fn.popover = function (option) {
+=======
+  function Plugin(option) {
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.popover')
@@ -96,6 +117,12 @@
     })
   }
 
+<<<<<<< HEAD
+=======
+  var old = $.fn.popover
+
+  $.fn.popover             = Plugin
+>>>>>>> 1aaad6481cb064f31f85d519cd56e3c1799585cf
   $.fn.popover.Constructor = Popover
 
 
